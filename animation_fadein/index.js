@@ -30,7 +30,8 @@ function createSpan(i, j, a, b) {
         height: "20px",
         background: "green",
         opacity: "0",
-        animation: `fadein 0.3s cubic-bezier(0.4, 0.0, 0.2, 1.0) ${delay}s 1 normal forwards`,
+        animation: `fadein 1.2s cubic-bezier(0.4, 0.0, 0.2, 1.0) ${delay}s 1 normal forwards`,
+        // animation: `fadein 0.3s cubic-bezier(0.4, 0.0, 0.2, 1.0) ${delay}s 1 normal forwards`,
     });
     return span;
 }
