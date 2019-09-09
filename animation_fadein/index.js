@@ -5,13 +5,20 @@ window.addEventListener("load", ()=>{
 
 function start() {
     const items = document.querySelector(".items");
-    for ( let i=0 ; i<number ; i++ ) {
-        const span = createSpan(i * 0.1);
-        items.appendChild(span);
+    for ( let j=0 ; j<number ; j++ ) {
+        const div = document.createElement("div");
+        for ( let i=0 ; i<50 ; i++ ) {
+            const span = createSpan(i, j);
+            div.appendChild(span);
+        }
+        items.appendChild(div);
     }
 }
 
-function createSpan(delay) {
+function createSpan(i, j) {
+    const b = j * 0.1;
+    const a = 1.0 - b;
+    const delay = a * ( i / 50 ) + b;
     let span = document.createElement("span");
     span = setStyles(span, {
         display: "inline-block",
