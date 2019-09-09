@@ -4,7 +4,8 @@ window.addEventListener("load", ()=>{
 });
 
 function start() {
-    const items = document.querySelector(".items");
+    const items = document.createElement("div");
+    items.classList.add(".items");
     for ( let j=0 ; j<number ; j++ ) {
         const div = document.createElement("div");
         const b = j * 0.1;
@@ -15,6 +16,7 @@ function start() {
         }
         items.appendChild(div);
     }
+    document.querySelector("body").appendChild(items);
 }
 
 function createSpan(i, j, a, b) {
@@ -28,7 +30,7 @@ function createSpan(i, j, a, b) {
         height: "20px",
         background: "green",
         opacity: "0",
-        animation: `fadein 0.3s ease-in ${delay}s 1 normal forwards`,
+        animation: `fadein 0.3s cubic-bezier(0.4, 0.0, 0.2, 1.0) ${delay}s 1 normal forwards`,
     });
     return span;
 }
