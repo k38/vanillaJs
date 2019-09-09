@@ -5,7 +5,7 @@ window.addEventListener("load", ()=>{
 
 function start() {
     const items = document.createElement("div");
-    items.classList.add(".items");
+    items.classList.add("items");
     for ( let j=0 ; j<number ; j++ ) {
         const div = document.createElement("div");
         const b = j * 0.1;
