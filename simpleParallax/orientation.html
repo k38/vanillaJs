@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HelloWorld</title>
+    <meta charset="utf-8">
+    <!-- <meta name="description" content=""> -->
+    <!-- <meta name="author" content=""> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="shortcut icon" href=""> -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+    <script>
+        let instance;
+
+        window.addEventListener("DOMContentLoaded", ()=>{
+            const images = document.querySelectorAll("img");
+            const options = {
+                orientation: "left"
+            };
+            instance = new simpleParallax(images, options);
+        });
+     </script>
+     <style>
+         window, body {
+             width: 1800px;
+         }
+         div {
+             display: table;
+             height: 100vh;
+         }
+         span {
+             display: table-cell;
+         }
+         img {
+             width: 600px
+         }
+     </style>
+</head>
+<body>
+    <div>
+        <span>
+            <img src="image/img01.jpg">
+        </span>
+        <span>
+            <img src="image/img02.jpg">
+        </span>
+        <span>
+            <img src="image/img03.jpg">
+        </span>
+    </div>
+</body>
+</html>
