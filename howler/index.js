@@ -16,4 +16,5 @@ function DOMContentLoaded(){
             sound.play(e.target.id);
         });
     });
+    sound.play("bg");
 }
